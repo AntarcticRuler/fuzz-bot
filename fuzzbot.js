@@ -33,6 +33,10 @@ client.on('message', (message) => {    // Anything in here happens when someone 
 
     if (message.author.bot) return; // Ignores bots
     //if (message.channel.type === "dm") return; // Ignores DM's
+    
+    if (message.content.startsWith("images")) {
+        message.channel.send ("Current images: oh worm, doole");
+    }
 
     if (message.content.startsWith("oh worm")) {
         message.channel.send('oh worm??', {
