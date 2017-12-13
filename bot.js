@@ -37,7 +37,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     if (message.content.startsWith("oh worm")) {
         message.channel.send('oh worm??', {
             files: [
-                "./OhWorm.png"
+                "./images/OhWorm.png"
             ]
         });
     }
