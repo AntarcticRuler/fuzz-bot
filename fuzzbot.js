@@ -13,7 +13,7 @@ const token = "Mzg0NTA2NTcxMTQ2Nzg4ODY3.DP32fQ.jLdWsBMos7JyKDsx8atkkUT-M9c"
 
 console.log("discord client and token created");
 
-news = "";
+//news = "";
 
 client.on("ready", () => {
     console.log("I am ready!");
@@ -47,14 +47,6 @@ client.on('message', (message) => {    // Anything in here happens when someone 
                 "./doole.png"
             ]
         });
-    }
-
-    if (message.content.startsWith ("news")) {
-        message.reply ("Here's the news : " + news);
-    }
-    if (message.content.startsWith("setNews") && message.author.username == "AntarcticRuler" && message.author.id == 198504755016892416) {
-        news = message.content;
-        message.reply ("the news is : " + news);
     }
 
 client.login(process.env.token); // the string is the bot's token
