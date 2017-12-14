@@ -40,7 +40,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         });
     }
     
-    if (message.content.startsWith("doole") && Discord.Guild.name = HEYHOE) {
+    if (message.content.startsWith("doole")) {
         message.channel.send('srunk and 20???? doole', {
             files: [
                 "./doole.png"
