@@ -16,6 +16,7 @@ console.log("discord client and token created");
 client.on("ready", () => {
     console.log("I am ready!");
     news = "";
+    newsTime;
 })
 
 const prefix = "f!";
@@ -49,11 +50,12 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     }
  
     if (message.content.startsWith ("news")) {
-        message.reply ("Here's the news : " + news);
+        message.reply ("Here's the news : " + news + "     - " + newsTime + "(time edited)");
     }
     if (message.content.startsWith("setnews") && message.author.username == "AntarcticRuler" && message.author.id == 198504755016892416) {
-        news = message.content + "   - {(new Date).toTimeString().slice(0,8)}";
-        message.reply ("the news is : " + news);
+        newsTime = (new Date).toTimeString().slice(0,8);
+        news = message.content
+        message.reply ("the news is : " + news + "   set at " + newsTime);
     }
     
     if (message.content.startsWith(prefix + "d20")) {
