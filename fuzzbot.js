@@ -24,7 +24,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     if (message.channel.type === "dm") return; // Ignores DM's
     
     if (message.content.startsWith("who's your daddy")) {
-        message.channel.send ("Nicolas K. is my creator <3");
+        message.channel.send ("Nicolas K. is my creator :heart:");
     }
     
     if (message.content.startsWith("images")) {
