@@ -47,6 +47,14 @@ client.on('message', (message) => {    // Anything in here happens when someone 
             ]
         });
     }
+    
+    if (message.content.startsWith("weeaboo slayer")) {
+        message.channel.send("weeaboo slayer is not fursona... it's art", {
+            files: [
+                "./weeaboSlayer.png"
+            ]
+        });
+    }
  
     if (message.content.startsWith ("news")) {
         message.reply ("Here's the news : " + news)
