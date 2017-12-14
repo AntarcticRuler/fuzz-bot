@@ -52,7 +52,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         message.reply ("Here's the news : " + news);
     }
     if (message.content.startsWith("setnews") && message.author.username == "AntarcticRuler" && message.author.id == 198504755016892416) {
-        news = message.content;
+        news = message.content + "   - (new Date).toTimeString().slice(0,8)";
         message.reply ("the news is : " + news);
     }
     
