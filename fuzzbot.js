@@ -15,6 +15,7 @@ console.log("discord client and token created");
 
 client.on("ready", () => {
     console.log("I am ready!");
+    news = "";
 })
 
 const prefix = "f!";
