@@ -13,9 +13,10 @@ const token = "Mzg0NTA2NTcxMTQ2Nzg4ODY3.DP32fQ.jLdWsBMos7JyKDsx8atkkUT-M9c"
 
 console.log("discord client and token created");
 
+news = "";
+
 client.on("ready", () => {
     console.log("I am ready!");
-    news = "";
 })
 
 const prefix = "f!";
