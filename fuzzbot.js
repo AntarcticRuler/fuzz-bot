@@ -59,7 +59,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     }
     
     if (message.content.startsWith ("news")) {
-        sdfghjkl
+        message.reply(",sorry, this is not a feature yet!);
     }
     
     if (message.content.startsWith(prefix + "d20")) {
