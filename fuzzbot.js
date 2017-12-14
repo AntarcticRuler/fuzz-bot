@@ -32,7 +32,11 @@ const prefix = "f!";
 client.on('message', (message) => {    // Anything in here happens when someone types something in the chat
 
     if (message.author.bot) return; // Ignores bots
-    //if (message.channel.type === "dm") return; // Ignores DM's
+    if (message.channel.type === "dm") return; // Ignores DM's
+    
+    if (message.content.startsWith("who's your daddy")) {
+        message.channel.send ("Nicolas K. is my creator <3");
+    }
     
     if (message.content.startsWith("images")) {
         message.channel.send ("Current images: oh worm, doole");
@@ -54,10 +58,10 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         });
     }
     
-    if (message.content.startsWith("who's your daddy?")) {
-        message.channel.send ("Nicolas K. is my creator <3");
+    if (message.content.startsWith ("news")) {
+        sdfghjkl
     }
-
+    
     if (message.content.startsWith(prefix + "d20")) {
         var d20number = Math.floor (Math.random() * (20 - 1)) + 1;
         message.reply("rolled a : " + d20number + "!");
