@@ -1,4 +1,6 @@
 //FuzzBot created by Nicolas Kychenthal!
+
+// * YOU DO NOT NEED TO RESTART THE HEROKU TO APPLY CHANGES!!! * 
 console.log("index started");
 
 const Discord = require('discord.js');   // const is a unchanchable variables
