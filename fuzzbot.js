@@ -46,5 +46,6 @@ client.on('message', (message) => {    // Anything in here happens when someone 
             ]
         });
     }
+});
 
 client.login(process.env.token); // the string is the bot's token
