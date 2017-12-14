@@ -47,20 +47,12 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         });
     }
 
-    
-    if (message.content.startsWith(prefix + "d20")) {
-        var d20number = Math.floor (Math.random() * (20 - 1)) + 1;
-        message.reply("rolled a : " + d20number + "!");
+    if (message.content.startsWith ("news")) {
+        message.reply ("Here's the news : " + news);
     }
-    if (message.content.startsWith(prefix + "d10")) {
-        var d10number = Math.floor (Math.random() * (10 - 1)) + 1;
-        message.reply("rolled a : " + d10number + "!");
+    if (message.content.startsWith("setNews") && message.author.username == "AntarcticRuler" && message.author.id == 198504755016892416) {
+        news = message.content;
+        message.reply ("the news is : " + news);
     }
-    if (message.content.startsWith(prefix + "d5")) {
-        var d5number = Math.floor (Math.random() * (5 - 1)) + 1;
-        message.reply("rolled a : " + d5number + "!");       
-    } 
-
-});
 
 client.login(process.env.token); // the string is the bot's token
