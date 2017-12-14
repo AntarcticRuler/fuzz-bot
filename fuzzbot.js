@@ -4,25 +4,12 @@ console.log("index started");
 const Discord = require('discord.js');   // const is a unchanchable variables
 console.log("Discord.js started");
 
-//const Enmap = require("enmap");    // PROBLEMS FOR SOME REASON!
-//console.log("enmap started");
-
-//const EnmapLevel = require('enmap-level');
-//console.log("enmap-level started");
-
 console.log("const's set");
 
 var client = new Discord.Client();
 const token = "Mzg0NTA2NTcxMTQ2Nzg4ODY3.DP32fQ.jLdWsBMos7JyKDsx8atkkUT-M9c"
 
 console.log("discord client and token created");
-
-//const tableSource = new EnmapLevel({name: "stats"});
-//const stats = new Enmap({provider: tableSource});
-
-//client.stats = new Enmap({name: "stats"});
-
-//console.log("table created");
 
 client.on("ready", () => {
     console.log("I am ready!");
@@ -39,7 +26,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     }
     
     if (message.content.startsWith("images")) {
-        message.channel.send ("Current images: oh worm, doole");
+        message.channel.send ("Current images: oh worm, doole, weabo slayer");
     }
 
     if (message.content.startsWith("oh worm")) {
