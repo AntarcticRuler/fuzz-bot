@@ -51,7 +51,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     if (message.content.startsWith ("news")) {
         message.reply ("Here's the news : " + news);
     }
-    if (message.content.startsWith("setNews") && message.author.username == "AntarcticRuler" && message.author.id == 198504755016892416) {
+    if (message.content.startsWith("setnews") && message.author.username == "AntarcticRuler" && message.author.id == 198504755016892416) {
         news = message.content;
         message.reply ("the news is : " + news);
     }
