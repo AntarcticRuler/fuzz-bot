@@ -58,7 +58,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         });
     }
     
-    if (message.content.startsWith ("news")) {
+    if (message.content.startsWith (prefix + "news")) {
         message.reply(",sorry, this is not a feature yet!);
     }
     
