@@ -31,7 +31,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     }
     
     if (message.content.startsWith("images")) {
-        message.channel.send ("Current images: oh worm, doole, weabo slayer");
+        message.channel.send ("Current images: oh worm, doole (heyhoe), weabo slayer (heyhoe)");
     }
 
     if (message.content.startsWith("oh worm")) {
