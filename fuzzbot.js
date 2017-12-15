@@ -21,6 +21,8 @@ client.on("ready", () => {
 const prefix = "f!";
 client.on('message', (message) => {    // Anything in here happens when someone types something in the chat
 
+    fuzzbotHQ = "374361004894846987"; heyhoe = "252232772758929408";
+    
     if (message.author.bot) return; // Ignores bots
     if (message.channel.type === "dm") return; // Ignores DM's
     
@@ -40,7 +42,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         });
     }
     
-    if (message.content.startsWith("doole")) {
+    if (message.content.startsWith("doole") && message.guild.id == heyhoe) {
         message.channel.send('srunk and 20???? doole', {
             files: [
                 "./doole.png"
@@ -48,7 +50,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         });
     }
     
-    if (message.content.startsWith("weeaboo slayer")) {
+    if (message.content.startsWith("weeaboo slayer") && message.guild.id == heyhoe) {
         message.channel.send("weeaboo slayer is not fursona... it's art", {
             files: [
                 "./weeaboSlayer.png"
