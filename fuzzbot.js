@@ -37,7 +37,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     }
     
     if (message.content.startsWith (prefix + "help")) {
-        message.author.sendMessage ('--- FuzzBot --- \nFuzzBot was made by AntarcticRuler \n \n--- Commands --- \nf!images ; f!news ; f!d20, f!d10, f!d5 \n \n--- Images --- \ntype what "f!images" says in chat to get the image \n*If you wish to submit images for your server send an invite to the server and a url picture of the image to me via DM* \n \n - Thank you for using FuzzBot, Nick :heart:');
+        message.author.sendMessage ('**--- FuzzBot ---** \nFuzzBot was made by AntarcticRuler \n \n**--- Commands ---** \nf!images ; f!news ; f!d20, f!d10, f!d5 \n \n**--- Images ---** \ntype what "f!images" says in chat to get the image \nIf you wish to submit images for your server send an invite to the server and a url picture of the image to me via DM \n \n - Thank you for using FuzzBot, Nick :heart:');
     }
     
     if (message.content.startsWith(prefix + "images")) {
