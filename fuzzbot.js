@@ -32,8 +32,8 @@ client.on('message', (message) => {    // Anything in here happens when someone 
 
     if (message.author.id == "198504755016892416") { NickUser = message.author; }
     
-    if (message.content.startsWith("who's your daddy")) {
-        message.channel.send ("Nicolas K. is my creator :heart:");
+    if (message.content.startsWith("who's your creator")) {
+        message.channel.send ("Nick, AntarcticRuler, is my creator :heart:");
     }
     
     if (message.content.startsWith (prefix + "help")) {
