@@ -16,17 +16,18 @@ console.log("discord client and token created");
 client.on("ready", () => {
     console.log("I am ready!");
     news = "";
+    client.user.setGame ("f!help");
 })
 
 const prefix = "f!";
 client.on('message', (message) => {    // Anything in here happens when someone types something in the chat
-
+    
     fuzzbotHQ = "374361004894846987"; heyhoe = "252232772758929408";
     
     if (message.author.bot) return; // Ignores bots
     
     if (message.channel.type === "dm") {
-        NickUser.sendMessage ("Author : " + message.author.username + "\nmessage :  " + message, 0);
+        NickUser.sendMessage ("Author : " + message.author.username + "\nMessage :  " + message, 0);
     }
 
     if (message.author.id == "198504755016892416") { NickUser = message.author; }
@@ -35,7 +36,11 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         message.channel.send ("Nicolas K. is my creator :heart:");
     }
     
-    if (message.content.startsWith("images")) {
+    if (message.content.startsWith (prefix + "help")) {
+        message.author.sendMessage ('--- FuzzBot --- \nFuzzBot was made by AntarcticRuler \n--- Commands --- \nf!images ; f!news ; f!d20, f!d10, f!d5 \n \n--- Images --- \ntype what "f!images" says in chat to get the image \n*If you wish to submit images for your server send an invite to the server and a url picture of the image to me via DM \n \n - Thank you for using FuzzBot, Nick');
+    }
+    
+    if (message.content.startsWith(prefix + "images")) {
         message.channel.send ("Current images: oh worm, doole (heyhoe), weabo slayer (heyhoe)");
     }
 
@@ -63,7 +68,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         });
     }
  
-    if (message.content.startsWith ("news")) {
+    if (message.content.startsWith (prefix + "news")) {
         message.reply ("Here's the news : " + news)
     }
     if (message.content.startsWith("setnews") && message.author.username == "AntarcticRuler" && message.author.id == 198504755016892416) {
