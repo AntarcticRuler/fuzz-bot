@@ -26,6 +26,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     
     if (message.author.bot) return; // Ignores bots
     
+    // REDIRECTING DM'S
     if (message.channel.type === "dm") {
         var messageEmbed = new Discord.RichEmbed()
             messageEmbed.addField("Username", message.author.username, true);
@@ -36,6 +37,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
  
     }
 
+    // MISC. COMMANDS
     if (message.author.id == "198504755016892416") { NickUser = message.author; }
     
     if (message.content == "test") {
@@ -53,7 +55,8 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     if (message.content.startsWith(prefix + "images")) {
         message.channel.send ("Current images: oh worm, doole (heyhoe), weabo slayer (heyhoe)");
     }
-
+    
+    // IMAGES AND VIDEO'S
     if (message.content.startsWith("oh worm")) {
         message.channel.send('oh worm??', {
             files: [
@@ -78,6 +81,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         });
     }
  
+    // NEWS
     if (message.content.startsWith (prefix + "news")) {
         message.reply ("Here's the news : " + news)
     }
@@ -86,6 +90,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         message.reply ("the news is : " + news);
     }
     
+    // DICE
     if (message.content.startsWith(prefix + "d20")) {
          var d20number = Math.floor (Math.random() * (20 - 1)) + 1;
          message.reply("rolled a : " + d20number + "!");
