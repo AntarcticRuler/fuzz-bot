@@ -32,7 +32,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
             messageEmbed.addField("ID", message.author.id, true);
             messageEmbed.setThumbnail(message.author.avatarURL);
         NickUser.sendMessage (messageEmbed);
-        NickUser.sendMessage ("message :   " + message);
+        NickUser.sendMessage ("Message :   " + message);
  
     }
 
