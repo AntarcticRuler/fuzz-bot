@@ -53,7 +53,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     }
     
     if (message.content.startsWith(prefix + "images")) {
-        message.channel.send ("Current images: oh worm, doole (heyhoe), weabo slayer (heyhoe)");
+        message.channel.send ("Current images: oh worm, doole (heyhoe), weaaboo slayer (heyhoe)");
     }
     
     // IMAGES AND VIDEO'S
