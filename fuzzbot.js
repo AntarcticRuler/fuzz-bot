@@ -27,7 +27,13 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     if (message.author.bot) return; // Ignores bots
     
     if (message.channel.type === "dm") {
-        NickUser.sendMessage ("Author : " + message.author.username + "\nMessage :  " + message, 0);
+        var messageEmbed = new Discord.RichEmbed()
+            messageEmbed.addField("username", message.author.username, true);
+            messageEmbed.addField("id", message.author.id, true);
+            messageEmbed.setThumbnail(message.author.avatarURL);
+        NickUser.sendMessage (messageEmbed);
+        NickUser.sendMessage ("message :   " + message);
+ 
     }
 
     if (message.author.id == "198504755016892416") { NickUser = message.author; }
