@@ -24,7 +24,12 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     fuzzbotHQ = "374361004894846987"; heyhoe = "252232772758929408";
     
     if (message.author.bot) return; // Ignores bots
-    if (message.channel.type === "dm") return; // Ignores DM's
+    
+    if (message.channel.type === "dm") {
+        NickUser.sendMessage ("Author : " + message.author.username + "\nmessage :  " + message, 0);
+    }
+
+    if (message.author.id == "198504755016892416") { NickUser = message.author; }
     
     if (message.content.startsWith("who's your daddy")) {
         message.channel.send ("Nicolas K. is my creator :heart:");
