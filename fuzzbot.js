@@ -76,7 +76,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     }
     
     if (message.content.startsWith (prefix + "items")) {
-        message.reply ("Items : \nFutureItems : Bracer of the Antarctic);
+        message.reply ("Items : \nFutureItems : Bracer of the Antarctic");
     }
     
 //     if (message.content.startsWith (prefix + "inventory")) {
