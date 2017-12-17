@@ -34,6 +34,7 @@ client.on("ready", () => {
 const prefix = "f!";
 client.on('message', (message) => {    // Anything in here happens when someone types something in the chat
     
+    MyID = "198504755016892416";
     fuzzbotHQ = "374361004894846987"; heyhoe = "252232772758929408";
     
     if (message.author.bot) return; // Ignores bots
@@ -73,6 +74,14 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     }
     
     // INVENTORY COMMANDS
+    if (message.content.startsWith (prefix + "fixTable") && message.author.id == MyID) {
+        message.reply ("right away!");
+        
+        const invSource = new EnmapLevel({name: "invTable"});
+        const invTable = new Enmap({provider: invSource});
+        client.invTable = new Enmap({name: "invTable"});
+    }
+    
     if (message.content.startsWith (prefix + "registerInv")) {
         var inventory = ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"];
         client.invTable.set(message.author.username, inventory);
