@@ -19,10 +19,6 @@ const token = "Mzg0NTA2NTcxMTQ2Nzg4ODY3.DP32fQ.jLdWsBMos7JyKDsx8atkkUT-M9c"
 
 console.log("discord client and token created");
 
-const invSource = new EnmapLevel({name: "invTable"});
-const invTable = new Enmap({provider: invSource});
-client.invTable = new Enmap({name: "invTable"});
-
 console.log("Table created");
 
 client.on("ready", () => {
@@ -73,23 +69,19 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         message.channel.send ("Current images: oh worm, doole (heyhoe), weaaboo slayer (heyhoe)");
     }
     
-    // INVENTORY COMMANDS
-    if (message.content.startsWith (prefix + "fixTable")) {
-        message.reply ("right away!");
-        
-        const invSource = new EnmapLevel({name: "invTable"});
-        const invTable = new Enmap({provider: invSource});
-        client.invTable = new Enmap({name: "invTable"});
-    }
-    
+    // INVENTORY COMMANDS   
     if (message.content.startsWith (prefix + "registerInv")) {
         var inventory = ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"];
-        client.invTable.set(message.author.username, inventory);
+        message.reply ("Inventories have not been implimented yet!"12);
     }
     
-    if (message.content.startsWith (prefix + "inventory")) {
-        message.channel.reply ("You're Inventory is : " + inventory[0] + ", " + inventory[1] + ", " + inventory[2] + ", " + inventory[3] + ", " + inventory[4] + ", " + inventory[5] + ", " + inventory[6] + ", "+ inventory[7] + ", "+ inventory[8] + ", "+ inventory[9]);
+    if (message.content.startsWith (prefix + "items")) {
+        message.reply ("Items : \nFutureItems : Bracer of the Antarctic);
     }
+    
+//     if (message.content.startsWith (prefix + "inventory")) {
+//         message.reply ("You're Inventory is : " + inventory[0] + ", " + inventory[1] + ", " + inventory[2] + ", " + inventory[3] + ", " + inventory[4] + ", " + inventory[5] + ", " + inventory[6] + ", "+ inventory[7] + ", "+ inventory[8] + ", "+ inventory[9]);
+//     }
     
     // IMAGES AND VIDEO'S
     if (message.content.startsWith("oh worm")) {
