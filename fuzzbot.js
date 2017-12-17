@@ -74,7 +74,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     }
     
     // INVENTORY COMMANDS
-    if (message.content.startsWith (prefix + "fixTable") && message.author.id == MyID) {
+    if (message.content.startsWith (prefix + "fixTable")) {
         message.reply ("right away!");
         
         const invSource = new EnmapLevel({name: "invTable"});
