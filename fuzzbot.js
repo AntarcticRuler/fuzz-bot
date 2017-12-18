@@ -14,6 +14,9 @@ const token = "Mzg0NTA2NTcxMTQ2Nzg4ODY3.DP32fQ.jLdWsBMos7JyKDsx8atkkUT-M9c"
 const fs = require("fs");
 client.inv = require("./inv.json");
 
+var appendjson = require('appendjson');
+
+
 console.log("discord client and token created");
 
 client.on("ready", () => {
