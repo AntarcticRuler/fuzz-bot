@@ -68,20 +68,6 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     }
     
     // INVENTORY COMMANDS   
-    if (message.content.startsWith("createFile")) {
-        var myJson = {
-            [message.author.username]: {
-                first: 'nick',
-                last: 'aaa'
-            }
-        }
-        var myFile = 'data.json'
-        appendjson(myJson, myFile, function() {
-            console.log('done')
-        })
-    }
-    
-    
     if (message.content.startsWith (prefix + "registerInv")) {
         var inv = ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"]
 
