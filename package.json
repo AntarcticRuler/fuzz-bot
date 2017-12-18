@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "appendjson": "^0.1.2",
     "discord": "^0.8.2",
     "discord.js": "^11.2.1",
     "enmap": "^0.4.2",
