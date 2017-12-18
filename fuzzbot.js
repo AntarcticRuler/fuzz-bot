@@ -78,6 +78,23 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         });
     }
     
+    if (message.content.startsWith (prefix + "inventory")) {
+        for (let i in client.inv) {
+            let slotOne = client.inv[i].slotOne;
+            let slotTwo = client.inv[i].slotTwo;
+            let slotThree = client.inv[i].slotThree;
+            let slotFour = client.inv[i].slotFour;
+            let slotFive = client.inv[i].slotFive;
+            let slotSix = client.inv[i].slotSix;
+            let slotSeven = client.inv[i].slotSeven;
+            let slotEight = client.inv[i].slotEight;
+            let slotNine = client.inv[i].slotNine;
+            let slotTen = client.inv[i].slotTen;
+
+            message.reply ("You're inventory is : " + slotOne + ", " + slotTwo + ", " + slotThree + ", " + slotFour + ", " + slotFive + ", " + slotSix + ", " + slotTwo + ", " + slotSeven + ", " + slotEight + ", " + slotNine + ", " + slotTen);
+        }
+    }
+    
     // IMAGES AND VIDEO'S
     if (message.content.startsWith("oh worm")) {
         message.channel.send('oh worm??', {
