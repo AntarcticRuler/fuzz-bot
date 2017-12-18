@@ -11,6 +11,9 @@ console.log("const's set");
 var client = new Discord.Client();
 const token = "Mzg0NTA2NTcxMTQ2Nzg4ODY3.DP32fQ.jLdWsBMos7JyKDsx8atkkUT-M9c"
 
+const fs = require("fs");
+client.inv = require("./inv.json");
+
 console.log("discord client and token created");
 
 client.on("ready", () => {
@@ -62,18 +65,18 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     }
     
     // INVENTORY COMMANDS   
-//     if (message.content.startsWith (prefix + "registerInv")) {
-//         var inventory = ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"];
-//         message.reply ("Inventories have not been implimented yet!"12);
-//     }
-    
-//     if (message.content.startsWith (prefix + "items")) {
-//         message.reply ("Items : \nFutureItems : Bracer of the Antarctic");
-//     }
-    
-//     if (message.content.startsWith (prefix + "inventory")) {
-//         message.reply ("You're Inventory is : " + inventory[0] + ", " + inventory[1] + ", " + inventory[2] + ", " + inventory[3] + ", " + inventory[4] + ", " + inventory[5] + ", " + inventory[6] + ", "+ inventory[7] + ", "+ inventory[8] + ", "+ inventory[9]);
-//     }
+    if (message.content.startsWith (prefix + "registerInv")) {
+        var inv = ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"]
+
+        client.inv [message.author.username] = {
+            discordID: message.author.id,
+            slotOne: inv[0], slotTwo: inv[1], slotThree: inv[2], slotFour: inv[3], slotFive: inv[4], slotSix: inv[5], slotSeven: inv[6], slotEight: inv[7], slotNine: inv[8], slotTen: inv[9]
+        }
+        fs.writeFile("./inv.json", JSON.stringify(client.inv, null, 4), err => {
+            if (err) throw err;
+            message.channel.send ("inventory registerred");
+        });
+    }
     
     // IMAGES AND VIDEO'S
     if (message.content.startsWith("oh worm")) {
