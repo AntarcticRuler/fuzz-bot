@@ -19,7 +19,7 @@ console.log("discord client and token created");
 client.on("ready", () => {
     console.log("I am ready!");
     news = "";
-    client.user.setGame ("f!help");
+    client.user.setGame ("f!help && f!info");
 })
 
 const prefix = "f!";
