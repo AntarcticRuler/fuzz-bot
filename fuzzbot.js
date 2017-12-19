@@ -52,8 +52,12 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         message.channel.send ("Nick, AntarcticRuler, is my creator :heart:");
     }
     
-    if (message.content.content == '👀') {
+    if (message.content.content ('👀')) {
         message.channel.send (":eyes:");
+    }
+    
+    if (message.content.startsWith ("mmm") && message.author.ID == MyID) {
+        message.channel.send (":yum:");
     }
     
     if (message.content.startsWith (prefix + "help")) {
