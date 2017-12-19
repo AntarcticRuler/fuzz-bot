@@ -56,7 +56,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         message.channel.send (":eyes:");
     }
     
-    if (message.content.startsWith ("mmm") && message.author.ID == MyID) {
+    if (message.content.startsWith ("mmm")) {
         message.channel.send (":yum:");
     }
     
