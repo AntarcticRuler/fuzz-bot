@@ -48,7 +48,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         message.channel.send ("FuzzBot is up and running!");
     }
     
-    if (message.content.startsWith("who's your creator" || "whos your creator")) {
+    if (message.content.startsWith("who's your creator") || message.content.startsWith("whos your creator")) {
         message.channel.send ("Nick, AntarcticRuler, is my creator :heart:");
     }
     
