@@ -19,7 +19,7 @@ console.log("discord client and token created");
 client.on("ready", () => {
     console.log("I am ready!");
     news = "";
-    client.user.setGame ("f!help && f!info");
+    client.user.setGame ("f!help & f!info");
 })
 
 const prefix = "f!";
@@ -49,7 +49,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     }
     
     if (message.content.startsWith("who's your creator") || message.content.startsWith("whos your creator") || message.content.startsWith (prefix + "info")) {
-        message.channel.sendMessage ("Nick, AntarcticRuler, created me :heart: \nYou can find him at his YouTube channel : https://goo.gl/HuyMMd \nAlso you can come back with me to our HQ here : https://discord.gg/74XpsNB");
+        message.author.sendMessage ("Nick, AntarcticRuler, created me :heart: \nYou can find him at his YouTube channel : https://goo.gl/HuyMMd \nAlso you can come back with me to our HQ here : https://discord.gg/74XpsNB");
     }
     
     if (message.content.startsWith ('👀')) {
