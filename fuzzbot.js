@@ -40,9 +40,20 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         NickUser.sendMessage ("Message :   " + message);
  
     }
+    
+    // NEWS
+    if (message.content.startsWith (prefix + "news")) {
+        message.reply ("Here's the news : " + news)
+    }
+    if (message.content.startsWith("setnews") && message.author.username == "AntarcticRuler" && message.author.id == 198504755016892416) {
+        news = message.content
+        message.reply ("the news is : " + news);
+    }
 
     // MISC. COMMANDS
     if (message.author.id == "198504755016892416") { NickUser = message.author; }
+    
+    message.toLowerCase();  // FROM HERE ON MESSAGE CANNOT BE USED DUE TO MESSAGE.TOLOWECASE();
     
     if (message.content == "test") {
         message.channel.send ("FuzzBot is up and running!");
@@ -69,7 +80,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     }
     
     // INVENTORY COMMANDS   
-    if (message.content.startsWith (prefix + "registerInv")) {
+    if (message.content.startsWith (prefix + "registerinv")) {
         var inv = ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"]
 
         client.inv [message.author.username] = {
@@ -122,15 +133,6 @@ client.on('message', (message) => {    // Anything in here happens when someone 
                 "./weeaboSlayer.png"
             ]
         });
-    }
- 
-    // NEWS
-    if (message.content.startsWith (prefix + "news")) {
-        message.reply ("Here's the news : " + news)
-    }
-    if (message.content.startsWith("setnews") && message.author.username == "AntarcticRuler" && message.author.id == 198504755016892416) {
-        news = message.content
-        message.reply ("the news is : " + news);
     }
     
     // DICE
