@@ -49,9 +49,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     }
     
     if (message.content.startsWith("who's your creator") || message.content.startsWith("whos your creator") || message.content.startsWith (prefix + "info")) {
-        message.channel.send ("Nick, AntarcticRuler, created me :heart:");
-        message.channel.send ("You can find him at his YouTube channel : https://goo.gl/HuyMMd");
-        message.channel.send ("Also you can come back with me to our HQ here : https://discord.gg/74XpsNB");
+        message.channel.sendMessage ("Nick, AntarcticRuler, created me :heart: \nYou can find him at his YouTube channel : https://goo.gl/HuyMMd \nAlso you can come back with me to our HQ here : https://discord.gg/74XpsNB");
     }
     
     if (message.content.startsWith ('👀')) {
