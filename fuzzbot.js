@@ -52,7 +52,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         message.channel.send ("Nick, AntarcticRuler, is my creator :heart:");
     }
     
-    if (message.content.startsWith (":eyes:")) {
+    if (message.content.content == client.emojis.find("name", "eyes")) {
         message.channel.send (":eyes:");
     }
     
