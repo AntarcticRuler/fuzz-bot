@@ -50,6 +50,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     
     if (message.content.startsWith("who's your creator" || "whos your creator")) {
         message.channel.send ("Nick, AntarcticRuler, is my creator :heart:");
+        meesage.channel.send ("This is a link to his YouTube channel : https://goo.gl/HuyMMd");
     }
     
     if (message.content.startsWith ('👀')) {
