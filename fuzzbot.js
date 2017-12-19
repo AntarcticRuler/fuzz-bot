@@ -48,11 +48,11 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         message.channel.send ("FuzzBot is up and running!");
     }
     
-    if (message.content.startsWith("who's your creator") || message.content.startsWith("whos your creator") || message.content.startsWith (prefix + "info")) {
-        message.channel.send ("Nick, AntarcticRuler, created me :heart:");
-        message.channel.send ("You can find him at his YouTube channel : https://goo.gl/HuyMMd);
-        message.channel.send ("Also you can come back with me to our HQ here : 74XpsNB");
-    }
+//     if (message.content.startsWith("who's your creator") || message.content.startsWith("whos your creator") || message.content.startsWith (prefix + "info")) {
+//         message.channel.send ("Nick, AntarcticRuler, created me :heart:");
+//         message.channel.send ("You can find him at his YouTube channel : https://goo.gl/HuyMMd);
+//         message.channel.send ("Also you can come back with me to our HQ here : 74XpsNB");
+//     }
     
     if (message.content.startsWith ('👀')) {
         message.channel.send (":eyes:");    // QUICK LESSON - MESSAGE.CONTENT.STARTSWITH USES () NOT "" FOR THE EQUALS STATEMENT
