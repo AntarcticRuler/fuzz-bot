@@ -69,18 +69,18 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     }
     
     // INVENTORY COMMANDS   
-    if (message.content.startsWith (prefix + "registerinv")) {
-        var inv = ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"]
+//     if (message.content.startsWith (prefix + "registerinv")) {
+//         var inv = ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"]
 
-        client.inv [message.author.username] = {
-            discordID: message.author.id,
-            slotOne: inv[0], slotTwo: inv[1], slotThree: inv[2], slotFour: inv[3], slotFive: inv[4], slotSix: inv[5], slotSeven: inv[6], slotEight: inv[7], slotNine: inv[8], slotTen: inv[9]
-        }
-        fs.writeFile("./inv.json", JSON.stringify(client.inv, null, 4), err => {
-            if (err) throw err;
-            message.channel.send ("inventory registerred");
-        });
-    }
+//         client.inv [message.author.username] = {
+//             discordID: message.author.id,
+//             slotOne: inv[0], slotTwo: inv[1], slotThree: inv[2], slotFour: inv[3], slotFive: inv[4], slotSix: inv[5], slotSeven: inv[6], slotEight: inv[7], slotNine: inv[8], slotTen: inv[9]
+//         }
+//         fs.writeFile("./inv.json", JSON.stringify(client.inv, null, 4), err => {
+//             if (err) throw err;
+//             message.channel.send ("inventory registerred");
+//         });
+//     }
     
     if (message.content.startsWith (prefix + "inventory")) {
         for (let i in client.inv) {
@@ -94,6 +94,11 @@ client.on('message', (message) => {    // Anything in here happens when someone 
             let slotEight = client.inv[i].slotEight;
             let slotNine = client.inv[i].slotNine;
             let slotTen = client.inv[i].slotTen;
+            let slotEleven = client.inv[i].slotEleven;
+            let slotTwelve = client.inv[i].slotTwelve;
+            let slotThirteen = client.inv[i].slotThirteen;
+            let slotFourteen = client.inv[i].slotFourteen;
+            let slotFifteen = client.inv[i].slotFifteen;
 
             message.reply ("You're inventory is : " + slotOne + ", " + slotTwo + ", " + slotThree + ", " + slotFour + ", " + slotFive + ", " + slotSix + ", " + slotTwo + ", " + slotSeven + ", " + slotEight + ", " + slotNine + ", " + slotTen);
         }
