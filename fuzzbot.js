@@ -95,7 +95,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     if (msg.startsWith("weeaboo slayer") && message.guild.id == heyhoe) {
         message.channel.send("weeaboo slayer is not fursona... it's art", {
             files: [
-                "./weeabo_slayer.png"
+                "./weeaboo_slayer.png"
             ]
         });
     }
