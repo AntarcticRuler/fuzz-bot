@@ -46,7 +46,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     // MISC. COMMANDS
     if (message.author.id == "198504755016892416") { NickUser = message.author; }
     
-    if (msg.content == "test") {
+    if (message.content == "test") {
         message.channel.send ("FuzzBot is up and running!");
     }
     
