@@ -49,8 +49,6 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         news = message.content
         message.reply ("the news is : " + news);
     }
-
-    message = message.content.toLowerCase;
     
     // MISC. COMMANDS
     if (message.author.id == "198504755016892416") { NickUser = message.author; }
