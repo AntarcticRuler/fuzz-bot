@@ -25,7 +25,7 @@ client.on("ready", () => {
 const prefix = "f!";
 client.on('message', (message) => {    // Anything in here happens when someone types something in the chat
     
-    msg = message.content.toLowerCase();
+    //msg = message.content.toLowerCase();
     
     MyID = "198504755016892416";
     fuzzbotHQ = "374361004894846987"; heyhoe = "252232772758929408";
