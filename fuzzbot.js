@@ -17,8 +17,7 @@ client.inv = require("./inv.json");
 console.log("discord client and token created");
 
 client.on("ready", () => {
-    console.log("I am ready!");
-    news = "";
+    console.log("I am ready!")
     client.user.setGame ("f!help & f!info");
 })
 
@@ -104,8 +103,11 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     if (msg.startsWith (prefix + "news")) {
         message.reply ("Here's the news : " + news)
     }
-    if (message.content.startsWith("setnews") && message.author.username == "AntarcticRuler" && message.author.id == 198504755016892416) {
-        news = message.content
+    if (msg.content.startsWith (prefix + "clearnews")) {
+        news = "";
+    }
+    if (msg.content.startsWith("setnews") && message.author.username == "AntarcticRuler" && message.author.id == 198504755016892416) {
+        news = message.content.slice (7);
         message.reply ("the news is : " + news);
     }
     
