@@ -18,6 +18,7 @@ console.log("discord client and token created");
 
 client.on("ready", () => {
     console.log("I am ready!")
+    news = "";
     client.user.setGame ("f!help & f!info");
 })
 
@@ -105,6 +106,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     }
     if (msg.startsWith (prefix + "clearnews")) {
         news = "";
+        message.channel.send ("news cleared");
     }
     if (msg.startsWith("setnews") && message.author.username == "AntarcticRuler" && message.author.id == 198504755016892416) {
         news = message.content.slice (7);
