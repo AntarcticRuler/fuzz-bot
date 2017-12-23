@@ -103,10 +103,10 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     if (msg.startsWith (prefix + "news")) {
         message.reply ("Here's the news : " + news)
     }
-    if (msg.content.startsWith (prefix + "clearnews")) {
+    if (msg.startsWith (prefix + "clearnews")) {
         news = "";
     }
-    if (msg.content.startsWith("setnews") && message.author.username == "AntarcticRuler" && message.author.id == 198504755016892416) {
+    if (msg.startsWith("setnews") && message.author.username == "AntarcticRuler" && message.author.id == 198504755016892416) {
         news = message.content.slice (7);
         message.reply ("the news is : " + news);
     }
