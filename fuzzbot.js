@@ -42,8 +42,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
             messageEmbed.addField("ID", message.author.id, true);
             messageEmbed.setThumbnail(message.author.avatarURL);
         NickUser.sendMessage (messageEmbed);
-        NickUser.sendMessage ("Message :   " + message);
-        NickUser.sendMessage ("-------------------------------");
+        NickUser.sendMessage ("Message :   " + message + "\n-------------------");
  
     }
     
@@ -51,8 +50,8 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     if (msg.startsWith (prefix + "send") && message.author.id == MyID) {
         if (mention == null) { return; }
         mentionMessage = message.content.slice (7);
-        console.log (mentionMessage);
         mention.sendMessage (mentionMessage);
+        message.channel.send ("Message sent!");
     }
     
     // MISC. COMMANDS
