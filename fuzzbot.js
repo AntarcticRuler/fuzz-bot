@@ -32,6 +32,8 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     
     if (message.author.bot) return; // Ignores bots
     
+    mention = message.mentions.users.first();
+    
     // REDIRECTING DM'S
     if (message.author.id == "198504755016892416") { NickUser = message.author; }
     if (message.channel.type === "dm") {
@@ -43,6 +45,14 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         NickUser.sendMessage ("Message :   " + message);
         NickUser.sendMessage ("-------------------------------");
  
+    }
+    
+    // DM people with FuzzBot
+    if (msg.startsWith (prefix + "send") && message.author.id == MyID) {
+        if (mention == null) { return; }
+        mentionMessage = message.content.slice (7);
+        console.log (mentionMessage);
+        mention.sendMessage (mentionMessage);
     }
     
     // MISC. COMMANDS
