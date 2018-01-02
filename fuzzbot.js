@@ -119,7 +119,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         news = "";
         message.channel.send ("news cleared");
     }
-    if (msg.startsWith("setnews") && message.author.username == "AntarcticRuler" && message.author.id == 198504755016892416) {
+    if (msg.startsWith(prefix + "setnews") && message.author.username == "AntarcticRuler" && message.author.id == 198504755016892416) {
         news = message.content.slice (7);
         message.reply ("the news is : " + news);
     }
