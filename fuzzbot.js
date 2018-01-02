@@ -33,6 +33,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     if (message.author.bot) return; // Ignores bots
     
     // REDIRECTING DM'S
+    if (message.author.id == "198504755016892416") { NickUser = message.author; }
     if (message.channel.type === "dm") {
         var messageEmbed = new Discord.RichEmbed()
             messageEmbed.addField("Username", message.author.username, true);
@@ -40,11 +41,11 @@ client.on('message', (message) => {    // Anything in here happens when someone 
             messageEmbed.setThumbnail(message.author.avatarURL);
         NickUser.sendMessage (messageEmbed);
         NickUser.sendMessage ("Message :   " + message);
+        NickUser.sendMessage ("-------------------------------");
  
     }
     
     // MISC. COMMANDS
-    if (message.author.id == "198504755016892416") { NickUser = message.author; }
     
     if (msg.startsWith ("test")) {
         message.channel.send ("FuzzBot is up and running!");
