@@ -89,7 +89,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     
     // INVENTORY COMMANDS   
     if (msg.startsWith(prefix + "inv")) {
-        message.channel.send ("The inventory feature is only avaliable during certain times. These times will be announced ahead of time in FuzzBot HQ under inventory and trade.");
+        message.channel.send ("The inventory feature is only avaliable during certain times. These times will be announced ahead of time in FuzzBot HQ under #inventory-times.");
     }
     
     // IMAGES AND VIDEO'S
