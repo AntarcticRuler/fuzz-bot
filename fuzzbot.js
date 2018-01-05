@@ -22,6 +22,13 @@ client.on("ready", () => {
     client.user.setGame ("f!help & f!info");
 })
 
+client.on ("guildMemberAdd", member => {
+    if (member.guild.id == 374361004894846987) {
+        var role = member.guild.roles.find ("name", "FuzzBot Peasent");
+        member.addRole (role);
+    }
+});
+
 const prefix = "f!";
 client.on('message', (message) => {    // Anything in here happens when someone types something in the chat
     
