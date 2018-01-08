@@ -56,6 +56,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     // DM people with FuzzBot
     if (msg.startsWith (prefix + "send") && message.author.id == MyID) {
         if (mention == null) { return; }
+        message.delete();
         mentionMessage = message.content.slice (7);
         mention.sendMessage (mentionMessage);
         message.channel.send ("Message sent!");
