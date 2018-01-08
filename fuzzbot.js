@@ -118,19 +118,6 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         });
     }
     
-    // NEWS
-    if (msg.startsWith (prefix + "news")) {
-        message.reply ("Here's the news : " + news)
-    }
-    if (msg.startsWith (prefix + "clearnews")) {
-        news = "";
-        message.channel.send ("news cleared");
-    }
-    if (msg.startsWith(prefix + "setnews") && message.author.username == "AntarcticRuler" && message.author.id == 198504755016892416) {
-        news = message.content.slice (7);
-        message.reply ("the news is : " + news);
-    }
-    
     // DICE
     if (msg.startsWith(prefix + "d20")) {
          var d20number = Math.floor (Math.random() * (20 - 1)) + 1;
