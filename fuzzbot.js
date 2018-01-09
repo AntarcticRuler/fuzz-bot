@@ -44,6 +44,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     // REDIRECTING DM'S
     if (message.author.id == "198504755016892416") { NickUser = message.author; }
     if (message.channel.type === "dm") {
+        if (message.author.id == MyID) { return; }
         var messageEmbed = new Discord.RichEmbed()
             messageEmbed.addField("Username", message.author.username, true);
             messageEmbed.addField("ID", message.author.id, true);
