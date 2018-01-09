@@ -120,7 +120,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     if (msg.startsWith (prefix + "d")) {
         number = msg.slice (3, 6); // Does not support digits after _ _ _ 
         var dxnumber = Math.floor (Math.random() * (number - 1)) + 1;
-        message.reply("rolled a : " + dxnumber + " out of " + number + " sides!");      
+        message.reply("rolled a " + dxnumber + " out of " + number + " sides!");      
     } 
     
 });
