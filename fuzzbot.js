@@ -119,7 +119,6 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     // DICE
     if (msg.startsWith (prefix + "d")) {
         number = msg.slice (3, 6); // Does not support digits after _ _ _ 
-        if (!number.isNaN) { return; }
         var dxnumber = Math.floor (Math.random() * (number - 1)) + 1;
         message.reply("rolled a : " + dxnumber + " out of " + number + " sides!");      
     } 
