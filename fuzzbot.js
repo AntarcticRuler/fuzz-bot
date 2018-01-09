@@ -117,17 +117,10 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     }
     
     // DICE
-    if (msg.startsWith(prefix + "d20")) {
-         var d20number = Math.floor (Math.random() * (20 - 1)) + 1;
-         message.reply("rolled a : " + d20number + "!");
-    }
-    if (msg.startsWith(prefix + "d10")) {
-        var d10number = Math.floor (Math.random() * (10 - 1)) + 1;
-        message.reply("rolled a : " + d10number + "!");
-    }
-    if (msg.startsWith(prefix + "d5")) {
-        var d5number = Math.floor (Math.random() * (5 - 1)) + 1;
-        message.reply("rolled a : " + d5number + "!");       
+    if (msg.startsWith (prefix + "d")) {
+        number = msg.slice (3, 6); // Does not support digits after _ _ _ 
+        var dxnumber = Math.floor (Math.random() * (number - 1)) + 1;
+        message.reply("rolled a : " + dxnumber + " out of " + number + " sides!");      
     } 
     
 });
