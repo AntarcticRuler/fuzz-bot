@@ -11,9 +11,6 @@ console.log("const's set");
 var client = new Discord.Client();
 //THE TOKEN GOES HERE (EXISTS ON HEROKU SO NO NEED FOR IT TO BE HERE)
 
-const fs = require("fs");
-client.inv = require("./inv.json");
-
 console.log("discord client and token created");
 
 client.on("ready", () => {
@@ -91,7 +88,7 @@ client.on('message', (message) => {    // Anything in here happens when someone 
     
     // INVENTORY COMMANDS   
     if (msg.startsWith(prefix + "inv")) {
-        message.channel.send ("The inventory feature is only avaliable during certain times. These times will be announced ahead of time in FuzzBot HQ under #inventory-times.");
+        message.channel.send ("The inventory feature is in a beta state so it will not always work!");
     }
     
     // IMAGES AND VIDEO'S
