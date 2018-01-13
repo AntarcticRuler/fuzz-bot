@@ -1,4 +1,5 @@
 //FuzzBot created by Nicolas Kychenthal!
+//Invite link for FuzzBot: https://discordapp.com/oauth2/authorize?client_id=384506571146788867&scope=bot&permissions=2146958419
 
 // * YOU DO NOT NEED TO RESTART THE HEROKU TO APPLY CHANGES!!! * 
 console.log("index started");
