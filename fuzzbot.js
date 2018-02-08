@@ -1,6 +1,9 @@
 //FuzzBot created by Nicolas Kychenthal!
 //Invite link for FuzzBot: https://goo.gl/Lsuu9s
 
+
+// FUZZBOT HAS BEEN MOVED TO A RASPBERRY PI - THIS IS OLD CODE FROM WHEN DONE ON HEROKU
+
 // * YOU DO NOT NEED TO RESTART THE HEROKU TO APPLY CHANGES!!! * 
 console.log("index started");
 
@@ -97,14 +100,6 @@ client.on('message', (message) => {    // Anything in here happens when someone 
         message.channel.send('oh worm??', {
             files: [
                 "./OhWorm.png"
-            ]
-        });
-    }
-    
-    if (msg.startsWith("doole") && message.guild.id == heyhoe) {
-        message.channel.send('srunk and 20???? doole', {
-            files: [
-                "./doole.png"
             ]
         });
     }
